@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "jsx-quotes": [
+        1,
+        "prefer-double"
+    ],
+    "import/extensions": 0,
+    "import/prefer-default-export": "off"
+  }
+}

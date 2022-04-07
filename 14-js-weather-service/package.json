@@ -1,0 +1,21 @@
+{
+	"name": "14-js-weather-service",
+	"version": "1.0.0",
+	"description": "Writing unit-tests for Weather service",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --coverage ./__tests__",
+		"start": "http-server -c-1 -p 8081"
+	},
+	"author": "Elena Shashina",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.16.7",
+		"@babel/preset-env": "^7.16.8",
+		"babel-jest": "^27.4.6",
+		"jest": "^27.4.7"
+	},
+	"dependencies": {
+		"node-fetch": "^3.1.0"
+	}
+}
