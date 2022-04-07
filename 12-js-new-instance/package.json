@@ -1,0 +1,11 @@
+{
+  "name": "12-js-new-instance",
+  "version": "1.0.0",
+  "description": "Implement function for the 'new'-operator to create new instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elena_Shashina@epam.com",
+  "license": "ISC"
+}
