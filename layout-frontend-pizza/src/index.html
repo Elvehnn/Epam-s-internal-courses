@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="logo-icon.svg" type="image/svg+xml" />
+		<title>Pizza for you</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="h1 visually-hidden">Frontend Pizza</h1>
+
+			<div class="header__wrapper">
+				<div class="header__logo">
+					<img src="./assets/logo_header.png" alt="Header-logo" />
+				</div>
+
+				<nav class="header__nav">
+					<ul class="navigation">
+						<li class="navigation__item"><a href="#" class="navigation__link">Меню</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Акции</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Доставка</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+					</ul>
+				</nav>
+
+				<div class="header__right-block">
+					<p class="header__phone">+7 (999) 999-99-99</p>
+
+					<div class="basket basket_tablet">
+						<div class="basket__image">
+							<div class="basket__icon"></div>
+							<div class="basket__counter">0</div>
+						</div>
+						<div class="basket__text">корзина пуста</div>
+					</div>
+
+					<div class="header__select">
+						<select class="header__cities-list">
+							<option value="Архангельск">Архангельск</option>
+							<option selected value="Рязань">Рязань</option>
+							<option value="Астрахань">Астрахань</option>
+							<option value="Белгород">Белгород</option>
+							<option value="Биробиджан">Биробиджан</option>
+							<option value="Благовещенск">Благовещенск</option>
+						</select>
+					</div>
+
+					<div class="hamburger">
+						<div class="hamburger__wrapper">
+							<div class="hamburger__line"></div>
+							<div class="hamburger__line"></div>
+							<div class="hamburger__line"></div>
+							<div class="hamburger__line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="slider">
+
+				<div class="slider__container">
+
+					<input id="slide_1" class="slide__button" checked="checked" name="slide__button" type="radio" />
+					<input id="slide_2" class="slide__button" name="slide__button" type="radio" />
+					<input id="slide_3" class="slide__button" name="slide__button" type="radio" />
+
+					<div id="first" class="slide_first slide">
+						<div class="slide__description">
+							<p class="slide__hashtag">#пицца</p>
+							<h2 class="slide__h2">Итальянский Каскад</h2>
+							<p class="slide__content">// с помидорами, лососем и зеленью</p>
+							<button class="button button_slider" type="button">Заказать</button>
+						</div>
+					</div>
+
+					<div id="second" class="slide slide_second">
+						<div class="slide__description">
+							<p class="slide__hashtag">#ингредиенты</p>
+							<h2 class="slide__h2">Свежие версии</h2>
+							<p class="slide__content">// тесто, сыр, мясо, овощи</p>
+							<button class="button button_slider" type="button">Подробнее</button>
+						</div>
+					</div>
+
+					<div id="third" class="slide slide_third">
+						<div class="slide__description">
+							<p class="slide__hashtag">#непрерывная</p>
+							<h2 class="slide__h2">Интеграция и доставка</h2>
+							<p class="slide__content">// фокус на заказчика</p>
+							<button class="button button_slider" type="button">Детали</button>
+						</div>
+					</div>				
+
+					<div id="arrow_previous">
+						<label for="slide_1" class="arrow arrow_left">
+							<div class="arrow__box">
+								<img class="arrow__shevron arrow__shevron_left" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back"></div>
+						</label>
+
+						<label for="slide_2" class="arrow arrow_left">
+							<div class="arrow__box">
+								<img class="arrow__shevron arrow__shevron_left" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back"></div>
+						</label>
+
+						<label for="slide_3" class="arrow arrow_left">
+							<div class="arrow__box">
+								<img class="arrow__shevron arrow__shevron_left" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back"></div>
+						</label>
+					</div>
+
+					<div id="arrow_next">
+						<label for="slide_1" class="arrow arrow_right">
+							<div class="arrow__box">
+									<img class="arrow__shevron arrow__shevron_right" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back arrow__back_right"></div>
+						</label>
+
+						<label for="slide_2" class="arrow arrow_right">
+							<div class="arrow__box">
+									<img class="arrow__shevron arrow__shevron_right" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back arrow__back_right"></div>
+						</label>
+
+						<label for="slide_3" class="arrow arrow_right">
+							<div class="arrow__box">
+									<img class="arrow__shevron arrow__shevron_right" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back arrow__back_right"></div>
+						</label>
+					</div>
+
+					<div class="switch">
+						<label id="switch_1" class="switch__item" for="slide_1"></label>
+						<label id="switch_2" class="switch__item" for="slide_2"></label>
+						<label id="switch_3" class="switch__item" for="slide_3"></label>
+					</div>
+
+					<!-- Вариант слайда без навигации -->
+					<!-- <div class="slide_first slide ">
+						<div class="slide__description">
+							<p class="slide__hashtag">#пицца</p>
+							<h2 class="slide__h2">Итальянский Каскад</h2>
+							<p class="slide__content">// с помидорами, лососем и зеленью</p>
+							<button class="button button_slider" type="button">Заказать</button>
+						</div>
+					</div>
+
+					<div class="slide slide_second">
+						<div class="slide__description">
+							<p class="slide__hashtag">#ингредиенты</p>
+							<h2 class="slide__h2">Свежие версии</h2>
+							<p class="slide__content">// тесто, сыр, мясо, овощи</p>
+							<button class="button button_slider" type="button">Подробнее</button>
+						</div>
+					</div>
+
+					<div class="slide slide_third">
+						<div class="slide__description">
+							<p class="slide__hashtag">#непрерывная</p>
+							<h2 class="slide__h2">Интеграция и доставка</h2>
+							<p class="slide__content">// фокус на заказчика</p>
+							<button class="button button_slider" type="button">Детали</button>
+						</div>
+					</div> -->
+
+					<!-- <div class="slider__control">
+						<div class="arrow">
+							<div class="arrow__box">
+								<img class="arrow__shevron arrow__shevron_left" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back"></div>
+						</div>	
+						<div class="arrow arrow_right">
+							<div class="arrow__box">
+								<img class="arrow__shevron arrow__shevron_right" src=".//assets/slider/right-arrow.png" alt="left-arrow"></img>
+							</div>
+							<div class="arrow__back arrow__back_right"></div>
+						</div>
+					</div> -->
+
+				</div>
+			</section>
+
+			<section class="menu">
+				<div class="menu__container">
+					<h3 class="menu__title">Меню</h3>
+
+					<div class="menu__filter">
+						<div class="menu__filter-list">
+							<button type="button" class="menu__filter-item menu__filter-item_active">Новинка</button>
+							<button type="button" class="menu__filter-item">Вегетарианская</button>
+							<button type="button" class="menu__filter-item">Мясо</button>
+							<button type="button" class="menu__filter-item">Курица</button>
+							<button type="button" class="menu__filter-item">Рыба</button>
+							<button type="button" class="menu__filter-item">Грибы</button>
+							<button type="button" class="menu__filter-item">Острая</button>
+						</div>
+						<form class="menu__search search">
+							<input name="search" placeholder="Поиск..." type="search" class="search__input">
+							<button type="submit" class="search__submit-button"></button>
+						</form>
+					</div>
+
+					<div class="menu__list-container">
+						<div class="menu__pizza-list">
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Итальянский Каскад</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сыр</li>
+											<li class="card__ingredients">Кусочки лосося</li>
+											<li class="card__ingredients">Помидоры</li>
+											<li class="card__ingredients">Перец</li>
+											<li class="card__ingredients">Зелень</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">470 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Замыкание с колбасками</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сыр</li>
+											<li class="card__ingredients">Колбаски</li>
+											<li class="card__ingredients">Помидоры</li>
+											<li class="card__ingredients">Грибы</li>
+											<li class="card__ingredients">Маслины</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">440 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Объектная мозаика</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сыр 2 вида</li>
+											<li class="card__ingredients">Колбаски</li>
+											<li class="card__ingredients">Помидоры</li>
+											<li class="card__ingredients">Грибы</li>
+											<li class="card__ingredients">Перец</li>
+											<li class="card__ingredients">Зелень</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">450 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Сырный компонент</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сыр 2 вида</li>
+											<li class="card__ingredients">Специи</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">310 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Летний массив</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сыр</li>
+											<li class="card__ingredients">Грибы</li>
+											<li class="card__ingredients">Помидоры</li>
+											<li class="card__ingredients">Маслины</li>
+											<li class="card__ingredients">Зелень</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">420 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+							<div class="card menu__card">
+								<div class="card__container">
+									<div class="card__content">
+										<h4 class="card__title">Прототип Вега</h4>
+										<ul class="card__description">
+											<li class="card__ingredients">Сливочный сыр</li>
+											<li class="card__ingredients">Помидоры</li>
+											<li class="card__ingredients">Зелень</li>
+											<li class="card__ingredients">Специи</li>
+										</ul>
+									</div>								
+									<div class="card__footer">
+										<div class="card__size-switcher">
+											<div class="card__size card__size_active">20 см</div>
+											<div class="card__size">30 см</div>
+											<div class="card__size">40 см</div>
+										</div>
+										<div class="card__price">380 &#8381</div>
+										<button class="button card__busket-button">В корзину</button>
+									</div>
+								</div>
+							</div>
+	
+						</div>
+	
+						<div class="basket basket_desktop">
+							<div class="basket__container">
+								<div class="basket__text">Корзина</div>
+								<ul class="basket__order">
+									<li class="basket__order-item">
+										<div class="basket__item-image"></div>
+										<div class="basket__item-description">
+											<p class="basket__item-name">Объектная Мозаика 20 см</p>
+											<p class="basket__item-price">1 шт х 450 &#8381</p>
+										</div>
+									</li>
+									<li class="basket__order-item">
+										<div class="basket__item-image"></div>
+										<div class="basket__item-description">
+											<p class="basket__item-name">Сырный компонент 20 см</p>
+											<p class="basket__item-price">1 шт х 310 &#8381</p>
+										</div>
+									</li>
+								</ul>
+								<div class="basket__button">Оформить</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="events">
+				<div class="events__container">
+					<h3 class="events__title">Акции</h3>
+					<div class="events__list">
+						<a href="#" class="events__item">
+							<div class="events__item-background">
+								<p class="events__item-title">Акция 2+1</p>
+								<p class="events__item-text">закажите 2 любых пиццы и получите ещё	одну в подарок!</p>
+							</div>
+						</a>
+						<a href="#" class="events__item">
+							<div class="events__item-background">
+								<p class="events__item-title">Бесплатная доставка</p>
+								<p class="events__item-text">при заказе <br> от 1000 рублей</p>
+							</div>
+						</a>
+						<a href="#" class="events__item">
+							<div class="events__item-background">
+								<p class="events__item-title">Самовывоз</p>
+								<p class="events__item-text">со скидкой 5%</p>
+							</div>
+						</a>
+						<a href="#" class="events__item">
+							<div class="events__item-background">
+								<p class="events__item-title">Узнайте рецепт</p>
+								<p class="events__item-text">при заказе одинаковой пиццы от трёх штук</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__divider"></div>
+				<div class="footer__logo"></div>
+				<div class="footer__divider"></div>
+				<p class="footer__copyright">© Copyright 2020 – «Frontend Pizza»</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+.footer {
+	background: url('../assets/footer_background.png') left center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__wrapper {
+		width: $content-width;
+		height: 364px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 2 * $side-padding;
+		padding-top: 68px;
+	}
+
+	&__divider {
+		width: 150px;
+		height: 1px;
+		background-color: $light-color;
+	}
+
+	&__logo {
+		width: 276px;
+		height: 52px;
+		background: url('../assets/logo_footer.png') center center;
+	}
+
+	&__copyright {
+		@include font($base-font-family, 17px, 100%);
+		color: $light-color;
+		letter-spacing: -0.01rem;
+	}
+}

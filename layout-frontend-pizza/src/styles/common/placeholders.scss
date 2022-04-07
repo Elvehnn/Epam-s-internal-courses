@@ -1,0 +1,17 @@
+@keyframes slideanimation {
+	16% {
+		opacity: 1;
+		z-index: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	49% {
+		opacity: 0;
+		z-index: 0;
+	}
+}
+
+%slideanimation {
+	animation: slideanimation 15s infinite;
+}

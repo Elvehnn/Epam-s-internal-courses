@@ -1,0 +1,27 @@
+.hamburger {
+	display: none;
+
+	@include media-tablet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__wrapper {
+		width: 40px;
+		height: 40px;
+		border: 2px solid #333333;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__line {
+		width: 50%;
+		height: 2px;
+		background-color: $basic-font-color;
+		margin: 1px 0;
+	}
+}

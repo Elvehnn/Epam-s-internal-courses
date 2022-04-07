@@ -1,0 +1,28 @@
+$font-size: 1rem;
+$side-padding: 15px;
+
+$light-color: #fff;
+$nav-font-color: #c83737;
+$basic-font-color: #333333;
+$add-font-color: #cccccc;
+
+$base-font-family: 'Roboto', 'Helvetica', sans-serif;
+
+$content-width: 1200px;
+$tablet-width: 906px;
+$mobile-width: 320px;
+
+html {
+	background: url('../assets/background.png') center center;
+	background-size: cover;
+	height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: center;
+	width: 100%;
+	height: 100%;
+}

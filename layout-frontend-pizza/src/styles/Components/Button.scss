@@ -1,0 +1,28 @@
+.button {
+	width: 186px;
+	height: 54px;
+	border: none;
+	border-radius: 5px;
+
+	&_slider {
+		background-color: $accent-color;
+		color: $basic-font-color;
+		@include font($base-font-family, 21px, 50px, 500);
+		text-align: center;
+		text-transform: uppercase;
+		filter: drop-shadow(1.414px 1.414px 1px rgba(0, 0, 0, 0.57));
+		position: relative;
+		left: 156px;
+		@include media-tablet {
+			left: 112px;
+		}
+		@include media-mobile {
+			left: 136px;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: #ffe733;
+		}
+	}
+}

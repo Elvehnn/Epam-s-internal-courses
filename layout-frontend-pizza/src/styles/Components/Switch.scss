@@ -1,0 +1,52 @@
+.switch {
+	width: 100%;
+	max-width: $content-width;
+	height: 31px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 $side-padding;
+	position: absolute;
+	bottom: -30px;
+
+	@include media-tablet {
+		max-width: $tablet-width;
+	}
+
+	@include media-mobile {
+		max-width: $mobile-width;
+		padding: 0 $side-padding;
+	}
+
+	&__item {
+		width: 32.5%;
+		height: 10px;
+		background-color: #565656;
+		&:hover {
+			cursor: pointer;
+		}
+		// animation if no navigation for slider
+		// animation: control-animation 15s infinite;
+		// &:first-child {
+		// 	animation-delay: 0;
+		// }
+		// &:nth-child(2) {
+		// 	animation-delay: 5s;
+		// }
+		// &:last-child {
+		// 	animation-delay: 10s;
+		// }
+	}
+
+	@keyframes control-animation {
+		16% {
+			background-color: $accent-color;
+		}
+		33% {
+			background-color: $accent-color;
+		}
+		49% {
+			background-color: #565656;
+		}
+	}
+}

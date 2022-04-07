@@ -1,0 +1,27 @@
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	width: 380px;
+
+	&__item {
+		margin: 0 10px;
+	}
+
+	&__link {
+		@include font($base-font-family, 21px, 21px);
+		text-decoration: none;
+		outline: none;
+		color: $nav-font-color;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: $nav-font-color;
+			text-decoration-thickness: auto;
+		}
+	}
+
+	@include media-tablet {
+		display: none;
+	}
+}

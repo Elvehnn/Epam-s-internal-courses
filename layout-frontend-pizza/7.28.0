@@ -1,0 +1,8 @@
++ eslint@5.16.0
+removed 1 package, updated 1 package, moved 3 packages and audited 853 packages in 6.722s
+
+95 packages are looking for funding
+  run `npm fund` for details
+
+found 44 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details

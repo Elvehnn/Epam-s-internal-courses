@@ -1,0 +1,152 @@
+@import './Switch.scss';
+
+.slider {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-bottom: 30px;
+
+	&__container {
+		width: 100%;
+		max-width: $content-width;
+		height: 580px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: 0 $side-padding;
+
+		@include media-tablet {
+			max-width: $tablet-width;
+			height: 434px;
+		}
+
+		@include media-mobile {
+			max-width: $mobile-width;
+			padding: 0;
+		}
+	}
+
+	.slide {
+		width: calc(100% - 30px);
+		height: 100%;
+		position: absolute;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s;
+		//animation for slider with no css navigation
+		// @extend %slideanimation;
+
+		@include media-mobile {
+			width: 100%;
+			padding: 0;
+		}
+
+		&_first {
+			background: url('../assets/slider/slide-1.png') no-repeat center center;
+			animation-delay: 0;
+		}
+
+		&_second {
+			background: url('../assets/slider/slide-2.png') no-repeat center center;
+			animation-delay: 5s;
+		}
+
+		&_third {
+			background: url('../assets/slider/slide-3.png') no-repeat center center;
+			animation-delay: 10s;
+		}
+
+		&__button {
+			display: none;
+		}
+
+		&__description {
+			width: 515px;
+			height: 100%;
+			position: relative;
+			background: url('../assets/slider/slider-background.png') no-repeat center center;
+			padding-left: 110px;
+			padding-right: 60px;
+
+			color: $light-color;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			@include media-tablet {
+				width: 384px;
+				padding-left: 70px;
+				padding-right: 16px;
+			}
+
+			@include media-mobile {
+				padding: 0 30px;
+			}
+		}
+
+		&__hashtag {
+			@include font($base-font-family, 32px, 100%, 200);
+			opacity: 67%;
+			margin: 0 0 15px 0;
+
+			@include media-tablet {
+				font-size: 25px;
+			}
+		}
+
+		&__h2 {
+			margin: 5px 0;
+		}
+
+		&__content {
+			@include font($add-font-family, 17px, 100%, 400, italic);
+			opacity: 67%;
+			margin: 0 0 30px 0;
+
+			@include media-tablet {
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__control {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		padding-bottom: 15px;
+	}
+
+	#slide_1:checked ~ #first,
+	#slide_2:checked ~ #second,
+	#slide_3:checked ~ #third {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	#slide_1:checked ~ #arrow_next label:nth-child(2),
+	#slide_2:checked ~ #arrow_next label:nth-child(3),
+	#slide_3:checked ~ #arrow_next label:nth-child(1) {
+		visibility: visible;
+	}
+
+	#slide_1:checked ~ #arrow_previous label:nth-child(3),
+	#slide_2:checked ~ #arrow_previous label:nth-child(1),
+	#slide_3:checked ~ #arrow_previous label:nth-child(2) {
+		visibility: visible;
+	}
+
+	#slide_1:checked ~ div #switch_1,
+	#slide_2:checked ~ div #switch_2,
+	#slide_3:checked ~ div #switch_3 {
+		background-color: $accent-color;
+	}
+}

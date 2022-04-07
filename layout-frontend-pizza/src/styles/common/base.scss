@@ -1,0 +1,40 @@
+* {
+	transition: all 0.2s;
+}
+
+html {
+	background: url('../assets/background.png') center center;
+	background-size: cover;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 0 auto;
+}
+
+h2 {
+	@include font($add-font-family, 48px, 105%, bold, italic);
+	@include media-tablet {
+		@include font($add-font-family, 40px, 105%, bold, italic);
+	}
+}
+
+h3 {
+	@include font($add-font-family, 32px, 105%, normal, italic);
+}
+
+h4 {
+	@include font($add-font-family, 26px, 105%, bold, italic);
+}

@@ -1,0 +1,156 @@
+.basket {
+	&_tablet {
+		display: none;
+
+		@include media-tablet {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 90px;
+			height: 100%;
+			overflow: hidden;
+		}
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		position: relative;
+	}
+
+	&__icon {
+		width: 100%;
+		height: 100%;
+		background: url('../assets/busket/busket_icon.png') no-repeat center center;
+	}
+
+	&__counter {
+		position: absolute;
+		top: 5.5px;
+		left: 14px;
+		@include font($base-font-family, 13px, 17px, 700);
+		color: $light-color;
+		text-align: center;
+		text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	}
+
+	&__text {
+		@include font($add-font-family, 21px, 100%, bold, italic);
+		color: $nav-font-color;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include media-tablet {
+			@include font($base-font-family, 13px, 11px);
+			color: $add-font-color;
+			text-align: center;
+			width: 55px;
+			text-transform: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&_desktop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 285px;
+		height: auto;
+
+		@include media-tablet {
+			display: none;
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 292px;
+		background: url('../assets/busket/basket.png') no-repeat center center;
+		background-size: cover;
+		filter: drop-shadow(8.485px 8.485px 6.5px rgba(0, 0, 0, 0.32));
+		padding-top: 35px;
+		padding-bottom: 24px;
+	}
+
+	&__button {
+		width: 127px;
+		height: 40px;
+		border-radius: 5px;
+		background-color: #c83737;
+		@include font($base-font-family, 17px, 100%, 700, normal);
+		color: $light-color;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			background-color: #ff3a3a;
+			cursor: pointer;
+		}
+	}
+
+	&__order {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		overflow: hidden;
+		height: 150px;
+		padding-top: 2 * $side-padding;
+	}
+
+	&__order-item {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: top;
+		margin-bottom: 10px;
+
+		&:first-child > .basket__item-image {
+			background: url('../assets/menu/pizza-1.png') no-repeat center center;
+			background-size: cover;
+		}
+
+		&:nth-child(2) > .basket__item-image {
+			background: url('../assets/menu/pizza-4.png') no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&__item-image {
+		width: 48px;
+		height: 38px;
+		border-radius: 5px;
+		margin-right: 5px;
+		border: none;
+		outline: none;
+	}
+
+	&__item-description {
+		display: flex;
+		flex-direction: column;
+		width: 125px;
+	}
+
+	&__item-name {
+		@include font($add-font-family, 14px, 90%, bold, italic);
+		color: $basic-font-color;
+		margin-bottom: 2px;
+	}
+
+	&__item-price {
+		@include font($add-font-family, 12px, 100%, 700, normal);
+		color: $nav-font-color;
+	}
+}

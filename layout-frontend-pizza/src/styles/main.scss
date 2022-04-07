@@ -1,0 +1,24 @@
+@import './common/normalize.css';
+@import './common/mixins';
+@import './common/constants.scss';
+
+@import './common/base.scss';
+@import './common/placeholders.scss';
+@import './common/fonts';
+
+@import './Layout/Header';
+@import './Components/Navigation';
+@import './Components/Hamburger';
+@import './Components/Busket';
+
+@import './Components/Slider';
+@import './Components/Button';
+@import './Components/Arrow';
+@import './Components/Switch';
+
+@import './Layout/Menu';
+@import './Components/Search';
+@import './Components/Card.scss';
+@import './Layout/Events.scss';
+
+@import './Layout/Footer';

@@ -1,0 +1,58 @@
+.arrow {
+	position: absolute;
+
+	@include media-mobile {
+		display: none;
+	}
+
+	&_left {
+		visibility: hidden;
+		left: 0;
+	}
+
+	&_right {
+		visibility: hidden;
+		right: 0;
+	}
+
+	&__box {
+		width: 70px;
+		height: 70px;
+		background-color: $light-color;
+		opacity: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__box:hover {
+		cursor: pointer;
+		opacity: 100%;
+		outline: none;
+	}
+
+	&__shevron {
+		width: 25px;
+		height: 25px;
+		opacity: inherit;
+	}
+
+	&__shevron_left {
+		transform: rotate(180deg);
+	}
+
+	&__back {
+		content: '';
+		width: 15px;
+		height: 15px;
+		background-color: #696969;
+		clip-path: polygon(0 0, 100% 100%, 100% 0);
+		position: relative;
+	}
+
+	&__back_right {
+		clip-path: polygon(0 0, 0 100%, 100% 0);
+		position: relative;
+		left: 55px;
+	}
+}
