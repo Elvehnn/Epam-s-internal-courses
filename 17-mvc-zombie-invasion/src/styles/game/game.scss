@@ -1,0 +1,23 @@
+.game {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__field {
+		width: 350px;
+		height: 750px;
+		background-color: #3da723;
+		position: relative;
+	}
+
+	&__hero {
+		width: 50px;
+		height: 50px;
+		background: url('../assets/hero.png') no-repeat center center;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 150px;
+	}
+}
