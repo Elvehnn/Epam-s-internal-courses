@@ -1,5 +1,8 @@
 # Kanban (js_components)
 
+## Deploy
+https://kanban-modules.netlify.app/
+
 ## Description
 
 -   `.js` files process by `babel` - JavaScript compiler
