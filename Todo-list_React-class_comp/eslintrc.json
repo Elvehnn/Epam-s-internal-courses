@@ -1,0 +1,42 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"airbnb-base",
+		"plugin:react/recommended",
+		"plugin:import/recommended",
+		"prettier"
+	],
+	"plugins": ["@typescript-eslint", "react", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": 11,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"prettier/prettier": "error",
+		"quotes": [0, "single"],
+		"jsx-quotes": [0, "prefer-single"],
+		"import/extensions": 0,
+		"import/prefer-default-export": "off",
+		"react/prop-types": "off",
+		"react/display-name": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/ban-ts-ignore": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-explicit-any": "error",
+		"@typescript-eslint/no-var-reqiures": "off",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off"
+	},
+	"root": true
+}

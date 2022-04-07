@@ -1,0 +1,18 @@
+@import "./normalize.css";
+@import "./base.scss";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	min-height: 450px;
+	height: 100vh;
+	margin: 0;
+	background: $background-color;
+	color: $add-font-color;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}

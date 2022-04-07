@@ -1,0 +1,33 @@
+@import "../../Styles/base.scss";
+
+.add {
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	padding: 10px 5px;
+	border-bottom: 1px solid #cccccc;
+}
+
+form > * {
+	background: transparent;
+	border: none;
+	height: 35px;
+}
+
+input {
+	width: 100%;
+}
+
+input[type="text"] {
+	padding: 0 0 0 15px;
+	font-weight: 700;
+	font-size: 1.5 * $font-size;
+	color: #c7c7c7;
+	outline: none;
+}
+
+input[type="submit"] {
+	display: none;
+}
