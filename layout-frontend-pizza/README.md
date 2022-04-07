@@ -1,5 +1,8 @@
 # Elena_Shashina_Inner_Group
 
+## Deploy
+https://layout-frontend-pizza.netlify.app/
+
 ## Адаптивная вёрстка с использованием BEM и Sass(less)
 
 Задание: сверстать макет веб-приложения доставки пиццы Frontend Pizza. 
