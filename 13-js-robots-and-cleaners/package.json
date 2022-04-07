@@ -1,0 +1,11 @@
+{
+  "name": "13-js-robots-and-cleaners",
+  "version": "1.0.0",
+  "description": " Implement robots and cleaners using ES5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elena_Shashina@epam.com",
+  "license": "ISC"
+}
