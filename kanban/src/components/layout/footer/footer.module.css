@@ -1,0 +1,26 @@
+.footer {
+  background: #0067a3;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-tasks-info {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.footer-tasks__status {
+  margin: 0 18px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+.owner {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 24px;
+}

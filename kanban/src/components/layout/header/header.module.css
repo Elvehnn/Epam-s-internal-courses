@@ -1,0 +1,112 @@
+.header {
+  width: 100%;
+  padding: 0 10%;
+  position: absolute;
+  height: 75px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+}
+.logo__icon {
+  background: url(../../assets/logo.svg) no-repeat center;
+  width: 45px;
+  height: 45px;
+}
+h1.logo__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  margin-left: 8px;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+}
+.add-button {
+  outline: none;
+  border: 0;
+  width: 181px;
+  height: 33px;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.add-button__icon {
+  background: url(../../assets/add-list.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  margin: auto 8px;
+}
+.add-button__icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.add-button__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.user__menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.user__menu:hover,
+.user__menu:focus {
+  cursor: pointer;
+}
+.user__avatar {
+  width: 40px;
+  height: 40px;
+  background: url(../../assets/user-avatar.svg) no-repeat center;
+}
+.menu__arrow {
+  width: 24px;
+  height: 24px;
+  background: url(../../assets/arrow-down.svg) no-repeat center;
+}
+.menu__arrow:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.menu__arrow_shown {
+  transform: rotate(180deg);
+}
+/* DROPDOWN LIST */
+.drop-down {
+  background-color: #0067a3;
+  width: 150px;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.drop-down__item {
+  border-bottom: 1px solid #fff;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.drop-down__item:last-child {
+  border-bottom: none;
+}
+.drop-down__item:hover,
+.drop-down__item:focus {
+  cursor: pointer;
+  background-color: #5596bb;
+}
