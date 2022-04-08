@@ -1,4 +1,4 @@
-## Задача: SPA Todo List на классовых компонентах
+## Задача: SPA Todo List на хуках
 Реализовать single-page приложение, с таким же функционалом, как в этом примере: https://todomvc.com/examples/vanilla-es6/
 
 - использовать React с create-react-app и hooks
