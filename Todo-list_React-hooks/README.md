@@ -24,4 +24,4 @@ Open http://localhost:3000 to view it in your browser.
 Builds the app for production to the build folder.\
 
 ## Deployment
-todo-appl.netlify.app
+https://todo-appl.netlify.app/
