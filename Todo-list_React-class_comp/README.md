@@ -32,6 +32,6 @@ Builds the app for production to the `build` folder.\
 
 ### Deployment
 
-not yet
+https://todo-appl.netlify.app/
 
 
