@@ -1,11 +1,12 @@
 import './styles/main.scss';
-import Game from './modules/Game';
-import RenderGame from './modules/RenderGame';
+import Model from './modules/Model';
+import View from './modules/View';
+import Controller from './modules/Controller';
 
 window.addEventListener('load', () => {
-	const model = new Game();
-	const view = new RenderGame(model);
-	// const controller = new GameController(model, view);
+	const model = new Model();
+	const view = new View(model);
+	const controller = new Controller(model, view);
 
 	view.render();
 });

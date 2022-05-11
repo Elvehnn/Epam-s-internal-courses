@@ -9,13 +9,23 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<audio src="./assets/music.mp3" loop></audio>
-			<!-- <embed src="./assets/music.mp3" width="100" height="100" autostart="true" volume="100" repeat="true" ></embed> -->
 			<section class="board">
 				<div class="board__level">Level 1</div>
-				<div class="board__score">2000</div>
+				<div class="board__score" id="score">0</div>
 			</section>
+
 			<section class="game">
+				<div class="game__keys-container">
+					<div class="moving-keys">
+						<div class="game__key key-left">&larr;</div>
+						<div class="game__key key-right">&rarr;</div>
+					</div>
+					<p class="key-title">MOVE</p>
+
+					<div class="game__key key-up">&uarr;</div>
+					<p class="key-title">SHOOT</p>
+				</div>
+
 				<div class="game__field"></div>
 			</section>
 		</div>

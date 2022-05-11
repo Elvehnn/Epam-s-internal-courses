@@ -7,6 +7,6 @@ export default class EventEmitter {
 		return this;
 	}
 	emit(eventName, arg) {
-		(this._events[eventName] || []).slice().forEach((lsn) => lsn(arg));
+		(this._events[eventName] || []).slice().forEach((listener) => listener(arg));
 	}
 }

@@ -1,26 +1,24 @@
-/* eslint-disable no-undef */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('Clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// eslint-disable-next-line no-undef
 module.exports = {
 	mode: 'development',
 	entry: './src/index.js',
 	devtool: 'inline-source-map',
 	output: {
-		// eslint-disable-next-line no-undef
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
 	},
 	devServer: {
-		port: 9005,
-		// contentBase: path.join(__dirname, "./dist"),
+		port: 1234,
+		// contentBase: path.join(__dirname, './dist'),
 		open: true,
+		hot: true,
 	},
 	resolve: {
-		extensions: ['.ts', '.js'],
+		extensions: ['.js'],
 	},
 	module: {
 		rules: [
@@ -43,11 +41,6 @@ module.exports = {
 			{
 				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
 				type: 'asset/inline',
-			},
-			{
-				test: /\.ts?$/,
-				use: 'ts-loader',
-				exclude: /node_modules/,
 			},
 		],
 	},

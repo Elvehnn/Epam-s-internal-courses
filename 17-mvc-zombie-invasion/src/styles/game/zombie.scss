@@ -17,14 +17,4 @@
 	display: flex;
 	justify-content: flex-start;
 	position: absolute;
-	animation: fallingDown 15s linear;
-}
-
-@keyframes fallingDown {
-	0% {
-		top: 0;
-	}
-	100% {
-		top: 700px;
-	}
 }

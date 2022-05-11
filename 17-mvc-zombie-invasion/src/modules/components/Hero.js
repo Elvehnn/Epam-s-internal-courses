@@ -1,9 +1,9 @@
-import Bullet from './Bullet';
+import { FIELD_HEIGHT } from '../constants';
 export default class Hero {
 	constructor() {
 		this.element = this.createHero();
 		this.offsetX = 150;
-		this.offsetY = 700;
+		this.offsetY = FIELD_HEIGHT;
 	}
 
 	createHero() {
@@ -39,11 +39,6 @@ export default class Hero {
 	}
 
 	shooting() {
-		const bullet = new Bullet(this);
-		const bulletElement = bullet.createBulletElement();
-
-		this.element.append(bulletElement);
-
-		return bullet;
+		return this.offsetX;
 	}
 }
