@@ -1,5 +1,7 @@
 # Elena_Shashina_Inner_Group
 
+Deploy - elvehnn-zombie-invasion.netlify.app
+
 ## Задание: Игра "Нашествие Зомби"
 Написать приложение-игру для браузера, используя HTML, CSS, JS, MVC и паттерн Observer (Event Emitter):
 
