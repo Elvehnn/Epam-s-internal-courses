@@ -1,4 +1,9 @@
-import { render, screen, RenderResult, fireEvent } from '@testing-library/react';
+import {
+	render,
+	screen,
+	RenderResult,
+	fireEvent,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import ToDoListContainer from './ToDoListContainer';
 import { MemoryRouter } from 'react-router-dom';
@@ -25,7 +30,9 @@ describe('ToDoListContainer', () => {
 	test('render initial state', () => {
 		renderToDoListContainer('');
 
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('0 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'0 items left'
+		);
 		expect(screen.getByTestId('select-all')).not.toBeChecked();
 	});
 
@@ -35,8 +42,12 @@ describe('ToDoListContainer', () => {
 		fireEvent.submit(screen.getByTestId('submit'));
 
 		expect(screen.getByTestId('list-item-checkbox')).not.toBeChecked();
-		expect(screen.getByTestId('list-item-text')).toHaveTextContent('Learn Redux');
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('1 items left');
+		expect(screen.getByTestId('list-item-text')).toHaveTextContent(
+			'Learn Redux'
+		);
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'1 items left'
+		);
 	});
 
 	test('should toggle todo completeness', () => {
@@ -44,7 +55,9 @@ describe('ToDoListContainer', () => {
 		userEvent.click(screen.getByTestId('list-item-checkbox'));
 
 		expect(screen.getByTestId('list-item-checkbox')).toBeChecked();
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('0 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'0 items left'
+		);
 	});
 
 	test('should edit todo on double click and blur', async () => {
@@ -52,13 +65,15 @@ describe('ToDoListContainer', () => {
 		userEvent.dblClick(screen.getByTestId('list-item-text'));
 
 		expect(screen.getByTestId('edit-item')).toBeInTheDocument();
-		userEvent.type(screen.getByTestId('edit-item'), 'Learn Redux Native');
+		userEvent.type(screen.getByTestId('edit-item'), ' Native');
 		expect(screen.getByTestId('edit-item')).toHaveValue('Learn Redux Native');
 
 		userEvent.click(screen.getByTestId('footer'));
 
 		expect(screen.queryByTestId('edit-item')).toBeNull();
-		expect(screen.getByTestId('list-item-text')).toHaveTextContent('Learn Redux Native');
+		expect(screen.getByTestId('list-item-text')).toHaveTextContent(
+			'Learn Redux Native'
+		);
 	});
 
 	test('should not edit todo if empty input value', async () => {
@@ -67,12 +82,12 @@ describe('ToDoListContainer', () => {
 
 		expect(screen.getByTestId('edit-item')).toBeInTheDocument();
 		userEvent.type(screen.getByTestId('edit-item'), '   ');
-		expect(screen.getByTestId('edit-item')).toHaveValue('');
-
 		userEvent.click(screen.getByTestId('footer'));
 
 		expect(screen.queryByTestId('edit-item')).toBeNull();
-		expect(screen.getByTestId('list-item-text')).toHaveTextContent('Learn Redux Native');
+		expect(screen.getByTestId('list-item-text')).toHaveTextContent(
+			'Learn Redux Native'
+		);
 	});
 
 	test('should edit todo on double click and Enter key', async () => {
@@ -80,10 +95,15 @@ describe('ToDoListContainer', () => {
 		userEvent.dblClick(screen.getByTestId('list-item-text'));
 
 		expect(screen.getByTestId('edit-item')).toBeInTheDocument();
-		userEvent.type(screen.getByTestId('edit-item'), 'Learn Redux Toolkit {enter}');
+		userEvent.type(
+			screen.getByTestId('edit-item'),
+			'Learn Redux Toolkit {enter}'
+		);
 
 		expect(screen.queryByTestId('edit-item')).toBeNull();
-		expect(screen.getByTestId('list-item-text')).toHaveTextContent('Learn Redux Toolkit');
+		expect(screen.getByTestId('list-item-text')).toHaveTextContent(
+			'Learn Redux Toolkit'
+		);
 	});
 
 	test('should add 2 todo items to list', () => {
@@ -94,7 +114,9 @@ describe('ToDoListContainer', () => {
 		fireEvent.submit(screen.getByTestId('submit'));
 
 		expect(screen.getAllByTestId('list-item-text').length).toBe(3);
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('2 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'2 items left'
+		);
 	});
 
 	test('should toggle all items to completed', () => {
@@ -107,7 +129,9 @@ describe('ToDoListContainer', () => {
 		expect(checkboxes[0]).toBeChecked();
 		expect(checkboxes[1]).toBeChecked();
 		expect(checkboxes[2]).toBeChecked();
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('0 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'0 items left'
+		);
 	});
 
 	test('should toggle all items to active', () => {
@@ -120,7 +144,9 @@ describe('ToDoListContainer', () => {
 		expect(checkboxes[0]).not.toBeChecked();
 		expect(checkboxes[1]).not.toBeChecked();
 		expect(checkboxes[2]).not.toBeChecked();
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('3 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'3 items left'
+		);
 	});
 
 	test('should remove completed items from list', () => {
@@ -130,7 +156,9 @@ describe('ToDoListContainer', () => {
 		expect(checkboxes[2]).toBeChecked();
 		userEvent.click(screen.getByTestId('clear-button'));
 
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('2 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'2 items left'
+		);
 		expect(screen.getAllByTestId('list-item')).toHaveLength(2);
 	});
 
@@ -148,7 +176,9 @@ describe('ToDoListContainer', () => {
 		renderToDoListContainer('');
 		userEvent.click(screen.getAllByTestId('delete-button')[1]);
 
-		expect(screen.getByTestId('footer-counter')).toHaveTextContent('1 items left');
+		expect(screen.getByTestId('footer-counter')).toHaveTextContent(
+			'1 items left'
+		);
 		expect(screen.getAllByTestId('delete-button')).toHaveLength(1);
 	});
 
