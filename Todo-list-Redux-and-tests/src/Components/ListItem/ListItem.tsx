@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { editTodo, toggleTodo } from '../../Store/actions';
 import DeleteButton from '../Buttons/DeleteButton';
@@ -10,52 +10,51 @@ export interface ListItemProps {
 	completed?: boolean;
 }
 
+const handleKeyDown = (event: React.KeyboardEvent): void => {
+	if (event.key === 'Enter') {
+		(event.target as HTMLInputElement).blur();
+	}
+};
+
 const ListItem = ({ id, todo, completed }: ListItemProps) => {
 	const dispatch = useDispatch();
+	const [isEdit, setIsEdit] = useState<boolean>(false);
 
-	const [editId, setEditId] = useState<number>();
-	const [newToDoItem, setToDoItem] = useState('');
-
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-		if (event.target.value.trim() === '') return;
-
-		setToDoItem(event.target.value);
-	};
-
-	const handleKeyDown = (event: React.KeyboardEvent): void => {
-		if (event.key === 'Enter') {
-			dispatch(editTodo({ id: id, todo: newToDoItem, completed: completed }));
-			setEditId(-1);
-		}
-	};
-
-	const handleBlur = (event: React.FocusEvent<HTMLInputElement, Element>, id: number): void => {
-		if (event.target.value.trim() === '') {
-			setEditId(-1);
+	const handleBlur = (
+		event: React.FocusEvent<HTMLInputElement, Element>
+	): void => {
+		if (event.target.value.trim() === '' || event.target.value === todo) {
+			setIsEdit(false);
 
 			return;
 		}
 
-		dispatch(editTodo({ id: id, todo: newToDoItem, completed: completed }));
-		setEditId(-1);
+		dispatch(
+			editTodo({
+				id: id,
+				todo: event.target.value,
+				completed,
+			})
+		);
+		setIsEdit(false);
 	};
 
 	return (
-		<li id={'li-' + id} data-testid="list-item">
-			<div className="view" data-testid="view-item">
+		<li id={'li-' + id} data-testid='list-item'>
+			<div className='view' data-testid='view-item'>
 				<input
-					className="check"
-					type="checkbox"
-					onChange={(event) => dispatch(toggleTodo(+event.target.id))}
+					className='check'
+					type='checkbox'
+					onChange={() => dispatch(toggleTodo(id))}
 					checked={completed}
 					id={id.toString()}
-					data-testid="list-item-checkbox"
+					data-testid='list-item-checkbox'
 				/>
 				<label
 					id={id.toString()}
-					data-testid="list-item-text"
-					className={completed ? 'completed' : ''}
-					onDoubleClick={() => setEditId(id)}
+					data-testid='list-item-text'
+					className={completed ? `completed` : ''}
+					onDoubleClick={() => setIsEdit(true)}
 				>
 					{todo}
 				</label>
@@ -63,21 +62,18 @@ const ListItem = ({ id, todo, completed }: ListItemProps) => {
 				<DeleteButton id={id} />
 			</div>
 
-			{editId === id && (
+			{isEdit && (
 				<input
-					className="edit"
-					data-testid="edit-item"
-					// contentEditable="true"
+					className='edit'
+					data-testid='edit-item'
 					autoFocus={true}
-					placeholder={todo}
-					onChange={(event) => handleChange(event)}
-					onBlur={(event) => handleBlur(event, id)}
+					defaultValue={todo}
+					onBlur={(event) => handleBlur(event)}
 					onKeyDown={(event) => handleKeyDown(event)}
-					value={newToDoItem}
 				/>
 			)}
 		</li>
 	);
 };
 
-export default ListItem;
+export default memo(ListItem);

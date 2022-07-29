@@ -1,69 +1,71 @@
 .todos li {
-  user-select: none;
-  margin-bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+	user-select: none;
+	margin-bottom: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
 }
 
 .todos li i {
-  color: #c3c3c3;
-  font-size: 15px;
-  cursor: pointer;
-  padding: 5px;
-  @media screen and (max-width: 991px) {
-    font-size: 18px;
-  }
+	position: relative;
+	color: #c3c3c3;
+	font-size: 15px;
+	cursor: pointer;
+	padding: 5px;
+	@media screen and (max-width: 991px) {
+		font-size: 18px;
+	}
 }
 
 .view {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  padding: 5px 0 5px 5px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	padding: 5px 0 5px 5px;
+	position: relative;
 }
 
 label {
-  width: 100%;
-  color: #ffffff;
-  font-size: 20px;
-  position: relative;
-  border-radius: 3px;
-  cursor: default;
-  @media screen and (max-width: 991px) {
-    font-size: 20px;
-  }
+	width: 100%;
+	color: #ffffff;
+	font-size: 20px;
+	position: relative;
+	border-radius: 3px;
+	cursor: default;
+	@media screen and (max-width: 991px) {
+		font-size: 20px;
+	}
 }
 
 .completed {
-  color: rgb(214, 214, 214);
-  text-decoration: line-through;
+	color: rgb(214, 214, 214);
+	text-decoration: line-through;
 }
 
 .check {
-  width: 18px;
-  height: 18px;
-  display: block;
-  position: relative;
-  top: 2px;
-  margin-right: 10px;
-  background: #171717;
-  border-radius: 3px;
-  border: 1px solid #ffb510;
-  box-shadow: -2px -2px 2px rgba(67, 67, 67, 0.5), inset 2px 2px 4px rgba(0, 0, 0, 0.5),
-    inset -2px -2px 2px rgba(67, 67, 67, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
-  @media screen and (max-width: 991px) {
-    width: 22px;
-    height: 22px;
-  }
+	width: 18px;
+	height: 18px;
+	display: block;
+	top: 2px;
+	margin-right: 10px;
+	background: #171717;
+	border-radius: 3px;
+	border: 1px solid #ffb510;
+	box-shadow: -2px -2px 2px rgba(67, 67, 67, 0.5),
+		inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+		inset -2px -2px 2px rgba(67, 67, 67, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+	@media screen and (max-width: 991px) {
+		width: 22px;
+		height: 22px;
+	}
 }
 
 .edit {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  border: none;
-  border-radius: 5px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	border-radius: 5px;
 }
